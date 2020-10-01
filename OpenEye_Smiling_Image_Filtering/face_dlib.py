@@ -1,5 +1,4 @@
 from imutils import face_utils
-import numpy as np
 import argparse
 import imutils
 import dlib
@@ -74,7 +73,7 @@ for imagePath in imagePaths:
     
     # load the input image, resize it, and convert it to grayscale
     image = cv2.imread(imagePath)
-    image = imutils.resize(image, width=500)
+    image = imutils.resize(image, width=1200)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     
     # detect faces in the grayscale image
@@ -128,17 +127,17 @@ for imagePath in imagePaths:
         smile_percentage = SMILE/TOTAL*100
         
         # draw all eyes and mouth on the image along with the computed eye aspect ratio and mouth aspect ratio
-        cv2.putText(image, "EAR: {:.2f}".format(ear), (shape[rStart][0], shape[rStart][1]-40),
-        	cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 255), 1)
-        cv2.putText(image, "MAR: {:.2f}".format(mar), (shape[rStart][0], shape[rStart][1]-30),
-        	cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 0, 255), 1)
+        cv2.putText(image, "EAR: {:.2f}".format(ear), (shape[rStart][0], shape[rStart][1]-100),
+        	cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+        cv2.putText(image, "MAR: {:.2f}".format(mar), (shape[rStart][0], shape[rStart][1]-75),
+        	cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
         
     # show both the percentage in top left corner of image
     if TOTAL>0:      
-        cv2.putText(image, "Closed Eye: {}%".format(closedEye_percentage), (10, 20),
-        	cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-        cv2.putText(image, "Smiling Face: {}%".format(smile_percentage), (10, 40),
-        	cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        cv2.putText(image, "Closed Eye: {}%".format(closedEye_percentage), (10, 30),
+        	cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+        cv2.putText(image, "Smiling Face: {}%".format(smile_percentage), (10, 60),
+        	cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     
     # copy desired image based on the requirement. We will select all image without any face detection
     # or atleast one smiling face with less than 25% closed eye 
