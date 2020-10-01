@@ -9,7 +9,7 @@ The dlib library uses a pre-trained face detector which is based on a modificati
 
 The facial landmarks produced by dlib follow an indexable list, as I describe in this tutorial:
 
-![The full set of facial landmarks that can be detected via dlib](resources/facial_landmarks_68markup-768x619 (1).jpg)
+![The full set of facial landmarks that can be detected via dlib](resources/facial_landmarks.jpg)
 
 
 Examining the image, we can see that facial regions can be accessed via simple Python indexing (assuming zero-indexing with Python since the image above is one-indexed):
@@ -24,7 +24,7 @@ And the jaw via [0, 17].
 
 Based on the work by Soukupová and Čech in their 2016 paper, Real-Time Eye Blink Detection using Facial Landmarks, we can then derive an equation that reflects this relation called the eye aspect ratio (EAR):
 
-![DL](resources/blink_detection_equation.png)
+![DL](resources/eye_detection_equation.png)
 
 
 
