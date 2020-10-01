@@ -12,15 +12,14 @@ The facial landmarks produced by dlib follow an indexable list, as I describe in
 ![The full set of facial landmarks that can be detected via dlib](resources/facial_landmarks.jpg)
 
 
-Examining the image, we can see that facial regions can be accessed via simple Python indexing (assuming zero-indexing with Python since the image above is one-indexed):
-
-The mouth can be accessed through points [48, 68].
-The right eyebrow through points [17, 22].
-The left eyebrow through points [22, 27].
-The right eye using [36, 42].
-The left eye with [42, 48].
-The nose using [27, 35].
-And the jaw via [0, 17].
+Examining the image, we can see that facial regions can be accessed via simple Python indexing (assuming zero-indexing with Python since the image above is one-indexed):<br/>
+• The mouth can be accessed through points [48, 68].<br/>
+• The right eyebrow through points [17, 22].<br/>
+• The left eyebrow through points [22, 27].<br/>
+• The right eye using [36, 42].<br/>
+• The left eye with [42, 48].<br/>
+• The nose using [27, 35].<br/>
+• And the jaw via [0, 17].<br/>
 
 # EYE
 
@@ -32,23 +31,26 @@ Based on the work by Soukupová and Čech in their 2016 paper, Real-Time Eye Bli
 
 # SMILE
 
-Similarly we have applied an equation to predict smile
-
-NUM = ||P51-P59||+||P52-P58||+||P53-P57||
-DEN = ||P62-P68||+||P63-P67||+||P64-P66||
-
+Similarly we have applied an equation to predict smile <br/>
+NUM = ||P51-P59||+||P52-P58||+||P53-P57|| <br/>
+DEN = ||P62-P68||+||P63-P67||+||P64-P66|| <br/>
 MAR = NUM/DEN
 
 # THRESHOLD
 
-We have selected threshold for defining whether person is smiling or not on the basis of MAR. Are there eyes open or not on the basis of EAR. In this project we have chosen following values for threshold:
-EAR_Threshold = 0.2
+We have selected threshold for defining whether person is smiling or not on the basis of MAR. Are there eyes open or not on the basis of EAR. In this project we have chosen following values for threshold:<br/>
+EAR_Threshold = 0.2<br/>
 MAR_Threshold = 0.25
 
-# 
+# RESULT
 
-
+Our main focus was to filter out desired images from a set of marriage album collection. Our equation and threshold did pretty good on detected face. Detector model however was not able to detect distant and blurr images. So keeping that in mind below is one of the images of marriage
 
 ![DL](dataset/examples/7L2A7078.jpg)
+
+So, Lets visualise what our model is doing
+
+![DL](dataset/analysed_dataset/7L2A7078.jpg)
+
 
 
