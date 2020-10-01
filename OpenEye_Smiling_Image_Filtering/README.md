@@ -22,10 +22,30 @@ The left eye with [42, 48].
 The nose using [27, 35].
 And the jaw via [0, 17].
 
+# EYE
+
 Based on the work by Soukupová and Čech in their 2016 paper, Real-Time Eye Blink Detection using Facial Landmarks, we can then derive an equation that reflects this relation called the eye aspect ratio (EAR):
+
+![DL](resources/eye_landmark.png)
 
 ![DL](resources/eye_detection_equation.png)
 
+# SMILE
+
+Similarly we have applied an equation to predict smile
+
+NUM = ||P51-P59||+||P52-P58||+||P53-P57||
+DEN = ||P62-P68||+||P63-P67||+||P64-P66||
+
+MAR = NUM/DEN
+
+# THRESHOLD
+
+We have selected threshold for defining whether person is smiling or not on the basis of MAR. Are there eyes open or not on the basis of EAR. In this project we have chosen following values for threshold:
+EAR_Threshold = 0.2
+MAR_Threshold = 0.25
+
+# 
 
 
 
