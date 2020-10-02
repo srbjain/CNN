@@ -1,9 +1,13 @@
-# Deep Learning Projects
+# IMAGE FILTERING
 
 ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![Framework](https://img.shields.io/badge/Framework-Keras/TensorFlow-orange.svg)
 
+# PROJECT OVERVIEW
 
+• Created a model to filter out images with people with open eyes and smiling faces from an photograph shoot/album.<br/>
+• Used facial landmark to detect the landmarks of eyes and mouth and applied some equation to determine the state of facial regions.
 
+# PROJECT DETAILS
 
 The dlib library uses a pre-trained face detector which is based on a modification to the Histogram of Oriented Gradients + Linear SVM method for object detection.
 
@@ -51,6 +55,7 @@ Our main focus was to filter out desired images from a set of marriage album col
 So, Lets visualise what our model is doing
 
 ![DL](dataset/analysed_dataset/example_1.jpg)
+
 
 
 
