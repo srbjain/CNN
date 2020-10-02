@@ -11,7 +11,7 @@
 
 The dlib library uses a pre-trained face detector which is based on a modification to the Histogram of Oriented Gradients + Linear SVM method for object detection.
 
-The facial landmarks produced by dlib follow an indexable list, as I describe in this tutorial:
+The facial landmarks produced by dlib follow an indexable list, as shown below:
 
 ![The full set of facial landmarks that can be detected via dlib](resources/facial_landmarks.jpg)
 
@@ -29,7 +29,7 @@ Examining the image, we can see that facial regions can be accessed via simple P
 
 Based on the work by Soukupová and Čech in their 2016 paper, Real-Time Eye Blink Detection using Facial Landmarks, we can then derive an equation that reflects this relation called the eye aspect ratio (EAR):
 
-![DL](resources/eye_landmark.png)
+![DL](resources/eye_landmarks.png)
 
 ![DL](resources/eye_detection_equation.png)
 
