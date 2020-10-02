@@ -46,11 +46,11 @@ MAR_Threshold = 0.25
 
 Our main focus was to filter out desired images from a set of marriage album collection. Our equation and threshold did pretty good on detected face. Detector model however was not able to detect distant and blurr images. So keeping that in mind below is one of the images of marriage
 
-![DL](dataset/examples/7L2A7078.jpg)
+![DL](dataset/examples/example_1.jpg)
 
 So, Lets visualise what our model is doing
 
-![DL](dataset/analysed_dataset/7L2A7078.jpg)
+![DL](dataset/analysed_dataset/example_1.jpg)
 
 
 
